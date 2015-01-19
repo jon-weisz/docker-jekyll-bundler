@@ -12,12 +12,12 @@ RUN gem install bundler --no-ri --no-rdoc
 VOLUME /src
 
 
-ONBUILD WORKDIR /tmp
-ONBUILD ADD Gemfile Gemfile
-ONBUILD ADD Gemfile.lock Gemfile.lock 
-ONBUILD RUN bundle install
+#ONBUILD WORKDIR /tmp
+#ONBUILD ADD Gemfile Gemfile
+#ONBUILD ADD Gemfile.lock Gemfile.lock 
+#ONBUILD RUN bundle install
  
 
-ONBUILD WORKDIR /src
-ONBUILD ENTRYPOINT ["/bin/sh", "-c"] 
-ONBUILD CMD ["bundle exec jekyll serve --port 4000 --host 0.0.0.0"]
+#ONBUILD WORKDIR /src
+#ONBUILD ENTRYPOINT ["/bin/sh", "-c"] 
+#ONBUILD CMD ["bundle exec jekyll serve --port 4000 --host 0.0.0.0"]
